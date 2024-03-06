@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PtPrashantTripathi/LinkPe.git"
+    "url": "git+https://github.com/Pavan844/linkpe.git"
   },
   "keywords": [
     "later"
   ],
-  "author": "Pt. Prashant Tripathi",
+  "author": "PAVAN",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PtPrashantTripathi/LinkPe/issues"
+    "url": "https://github.com/Pavan844/linkpe/LinkPe/issues"
   },
-  "homepage": "https://github.com/PtPrashantTripathi/LinkPe#readme",
+  "homepage": https://github.com/Pavan844/linkpe/LinkPe#readme",
   "dependencies": {
     "express": "^4.18.1"
   }
