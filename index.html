@@ -2,84 +2,91 @@
 <html>
 
 <head>
-	<!-- Primary Meta Tags -->
-	<title>LinkPe | UPI LINK Generator</title>
-	<meta name="title" content="LinkPe | UPI LINK Generator">
-	<meta name="description" content="LinkPe | UPI LINK Generator - ">
-	<link rel="fluid-icon" href="https://raw.githubusercontent.com/PtPrashantTripathi/linkpe/main/img/linkpe.png"
-		title="PtPrashantTripathi | LinkPe" />
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://pavan844.github.io/linkpe">
-	<meta property="og:title" content="LinkPe | UPI LINK Generator">
-	<meta property="og:description"
-		content="LinkPe | UPI LINK Generator - https://github.com/Pavan844/linkpe60">
-	<meta property="og:image" content="https://raw.githubusercontent.com/PtPrashantTripathi/linkpe/main/img/linkpe.png">
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://pavan844.github.io/linkpe">
-	<meta property="twitter:title" content="LinkPe | UPI LINK Generator">
-	<meta property="twitter:description"
-		content="LinkPe | UPI LINK Generator - https://github.com/Pavan844/linkpe54">
-	<meta property="twitter:image"
-		content="https://raw.githubusercontent.com/PtPrashantTripathi/linkpe/main/img/linkpe.png">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/main.css">
-	<!--Coded by Pt. Prashant Tripathi @ptprashanttripathi on 14th Oct 2020 -->
+    <!-- Primary Meta Tags -->
+    <title>LinkPe | UPI LINK Generator</title>
+    <meta name="title" content="LinkPe | UPI LINK Generator">
+    <meta name="description" content="LinkPe | UPI LINK Generator - ">
+    <link rel="fluid-icon" href="https://raw.githubusercontent.com/PtPrashantTripathi/linkpe/main/img/linkpe.png"
+        title="PtPrashantTripathi | LinkPe" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pavan844.github.io/linkpe">
+    <meta property="og:title" content="LinkPe | UPI LINK Generator">
+    <meta property="og:description"
+        content="LinkPe | UPI LINK Generator - https://github.com/Pavan844/linkpe60">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/PtPrashantTripathi/linkpe/main/img/linkpe.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pavan844.github.io/linkpe">
+    <meta property="twitter:title" content="LinkPe | UPI LINK Generator">
+    <meta property="twitter:description"
+        content="LinkPe | UPI LINK Generator - https://github.com/Pavan844/linkpe54">
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/PtPrashantTripathi/linkpe/main/img/linkpe.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <!--Coded by Pt. Prashant Tripathi @ptprashanttripathi on 14th Oct 2020 -->
+</head>
 
 <body>
-	<center>
-		<div class="card">
-			<div class="card-content">
-				<a href="linkpe.html?new"><img src="img/logo.png" height="50"></a>
-				<h5 id="name" style="color: #101010;">
-					</h4>
-					<canvas id="qr"></canvas>
-					<div style="margin-top: 2px;">
-						<a id="linkpe">
-							<img src="img/upi.png" height="80">
-							<br>
-							<button class='btn'>Click here to Pay Now</button>
-						</a>
-					</div>
-					<p style="color: #555">
-						<b>Developed BY : </b>
-						<a href="https://pavan844.github.io" style="color: #999;">PAVAN 
-							</a><img src="https://visitor-badge.vercel.app/page/linkpe?color=Blue" />
+    <center>
+        <div class="card">
+            <div class="card-content">
+                <a href="linkpe.html?new"><img src="img/logo.png" height="50"></a>
+                <h5 id="name" style="color: #101010;"></h5>
+                <canvas id="qr"></canvas>
+                <div style="margin-top: 2px;">
+                    <a id="linkpe" href="#" onclick="submitPayment()">
+                        <img src="img/upi.png" height="80">
+                        <br>
+                        <button class='btn'>Click here to Pay Now</button>
+                    </a>
+                </div>
+                <p style="color: #555">
+                    <b>Developed BY : </b>
+                    <a href="https://pavan844.github.io" style="color: #999;">PAVAN </a>
+                    <img src="https://visitor-badge.vercel.app/page/linkpe?color=Blue" />
+                </p>
+            </div>
+        </div>
+    </center>
+    <script src="qrious/qrious.min.js"></script>
+    <script>
+        function submitPayment() {
+            // Perform payment processing here
+            // For now, let's assume the payment is successful
+            // Redirect back to your website after successful payment
+            window.location.href = 'https://youtu.be/wEt3f9f6_8U?si=XzW2ops_xtlr_Fmk'; // Replace with your actual redirect URL
+        }
 
-
-					</p>
-			</div>
-		</div>
-	</center>
-	<script src="qrious/qrious.min.js"></script>
-	<script>
-		if (window.location.search.indexOf('pa') > -1) {
-			const queryString = window.location.search;
-			const urlParams = new URLSearchParams(queryString);
-			const pn = urlParams.get('pn');
-			const pa = urlParams.get('pa');
-			var user;
-			if (pn !== "") user = pn;
-			else user = pa;
-			const url = 'upi://pay' + queryString;
-			document.getElementById("name").innerHTML = "Click on PayNow or Scan Qr and Pay using any UPI Apps To Pay <br>" + user;
-			document.getElementById("linkpe").href = url;
-			(function () {
-				var qr = new QRious({
-					element: document.getElementById('qr'),
-					background: '#fff',
-					foreground: '#000',
-					size: 200,
-					level: 'H',
-					value: url
-				});
-			})();
-		} else {
-			location.replace("linkpe.html?error");
-		}
-	</script>
+        if (window.location.search.indexOf('pa') > -1) {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const pn = urlParams.get('pn');
+            const pa = urlParams.get('pa');
+            var user;
+            if (pn !== "") user = pn;
+            else user = pa;
+            const url = 'upi://pay' + queryString;
+            document.getElementById("name").innerHTML = "Click on PayNow or Scan Qr and Pay using any UPI Apps To Pay <br>" + user;
+            document.getElementById("linkpe").href = url;
+            (function () {
+                var qr = new QRious({
+                    element: document.getElementById('qr'),
+                    background: '#fff',
+                    foreground: '#000',
+                    size: 200,
+                    level: 'H',
+                    value: url
+                });
+            })();
+        } else {
+            location.replace("linkpe.html?error");
+        }
+    </script>
 </body>
 
 </html>
+
